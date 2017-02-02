@@ -1,0 +1,23 @@
+{% block content %}
+
+	<html>
+
+		<header>
+			<title>:: Home ::</title>
+			{% load staticfiles %}
+			<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		</header>
+
+		<body>
+			<center>
+				<img src="{% static 'img/home.png' %}" alt="">
+				<h2>You are at Home. </h2>
+				<hr>
+				<p>Click {<a href="/login/">here</a>} to <b>Login</b>.</p>
+				<p>Click {<a href="/admin/">here</a>} for <b>admin</b>.</p>
+			</center>
+		</body>
+		
+	</html>
+
+{% endblock %}

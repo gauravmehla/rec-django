@@ -1,0 +1,43 @@
+
+	<td> Select Subject : </td>
+	<td>
+		<select name="" id="subject-select" onchange="getAttendence()">
+		<option value="">--None--</option>
+		{% for each in result %}
+
+			{% if each.2 != '' %}
+				<option value="{{ each.2 }}"> {{ each.2 }}</option>
+			{% endif %}
+
+			{% if each.3 != '' %}
+				<option value="{{ each.3 }}"> {{ each.3 }}</option>
+			{% endif %}
+
+			{% if each.4 != '' %}
+				<option value="{{ each.4 }}"> {{ each.4 }}</option>
+			{% endif %}
+
+			{% if each.5 != '' %}
+				<option value="{{ each.5 }}"> {{ each.5 }}</option>
+			{% endif %}
+
+			{% if each.6 != '' %}
+				<option value="{{ each.6 }}"> {{ each.6 }}</option>
+			{% endif %}
+
+			{% if each.7 != '' %}
+				<option value="{{ each.7 }}"> {{ each.7 }}</option>
+			{% endif %}
+
+		{% endfor %}
+		</select>
+	</td>
+
+	<td> Select Group :</td>
+	<td>	
+		<select name="" id="group-select" onchange="getAttendence()">
+			{% for each in groups  %}
+				<option value="{{ each }}"> {{ each }}</option>
+			{% endfor %}
+		</select>
+	</td>	

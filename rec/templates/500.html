@@ -1,0 +1,21 @@
+{% block content %}
+
+	<html>
+
+		<header>
+			<title>:: Logged In ::</title>
+			{% load staticfiles %}
+			<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		</header>
+
+		<body>
+			<center>
+				<img src="{% static 'img/sad.png' %}" alt="">
+				<h2>You Successfully Logged Out.! </h2>
+				<p>Click <a href="/login/"> here</a> to Login.</p>
+			</center>
+		</body>
+		
+	</html>
+
+{% endblock %}

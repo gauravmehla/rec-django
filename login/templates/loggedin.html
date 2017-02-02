@@ -1,0 +1,52 @@
+{% block content %}
+	
+	{% if full_name %}
+	<!--########### I Part  ###########-->	
+	<html>
+
+		<header>
+			<title>:: Logged In ::</title>
+			{% load staticfiles %}
+			<link rel="stylesheet" href="{% static 'css/style.css' %}">
+			<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+		</header>
+
+		<body>
+			<center>
+				<div id="result"></div>
+				<img src="{% static 'img/strive.png' %}" alt="">
+				<h2>Hi {{ full_name }} , You are now Logged In! </h2>
+				<p>Click <a href="/logout/"> here</a> to Logout.</p>
+				<a href="/attendence/">Attendence</a>
+			</center>
+		</body>
+		
+		<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+	</html>
+
+	<!--########### II Part  ###########-->
+	{% else %}
+
+		<html>
+
+			<header>
+				<title>:: Logged In ::</title>
+				{% load staticfiles %}
+				<link rel="stylesheet" href="{% static 'css/style.css' %}">
+			</header>
+
+			<body>
+				<center>
+				<div id="result"></div>
+					<img src="{% static 'img/faint.png' %}" alt="">
+					<h2>Please Login Again ! </h2>
+					<p>Click <a href="/login/"> here</a> to Login Again.</p>
+				</center>
+			</body>
+			
+		</html>
+
+	{% endif %}
+
+{% endblock %}

@@ -1,0 +1,52 @@
+<html>
+	<header>
+		<title>:: Attendence ::</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'css/result_stylesheet.css' %}">
+		<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+	</header>
+
+	<body>
+		<center>
+			<div class="top-most-wrapper">
+				<!-- {{ request.session.user }} -->
+				
+				<table>
+					<tr>
+						<td> Select Class : </td>
+						<td>
+							<select name="" id="class-select">
+							<option value="">--None--</option>
+								{% for class in all_classes %}
+									<option value="{{ class.id }}">{{ class }}</option> 
+								{% endfor %}
+							</select>
+						</td>
+					
+						<td> Select Sem :</td>
+						<td>
+							<select name="" id="semester-select">
+								<option value="First_Sem">1st</option>
+								<option value="Second_Sem">2nd</option>
+								<option value="Third_Sem">3rd</option>
+								<option value="Fourth_Sem">4th</option>
+								<option value="Fifth_Sem">5th</option>
+								<option value="Sixth_Sem">6th</option>
+								<option value="Seventh_Sem">7th</option>
+								<option value="Eighth_Sem">8th</option>
+							</select>
+						</td>
+					</tr>
+					
+					<tr id="result"></tr>
+					
+				</table>
+				<div id="attendence-wrapper"></div>
+			</div>
+		</center>
+	</body>
+	
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+</html>

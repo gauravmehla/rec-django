@@ -1,0 +1,35 @@
+
+<form action="" method="post">{% csrf_token %}
+
+	<table class="result-table">
+		<tr>
+			<td> Roll No. </td>
+			<td> Name </td>
+			<td> Attendence </td>
+			<td> Total </td>
+			<td> Status </td>
+		</tr>
+		{% for each , each1, each2 in all_list %}
+		<tr>
+			<td>{{ each.1 }}</td>
+			<td>{{ each.2 }}</td>
+			<td>{{ each1 }}</td>
+			<td>{{ each2 }}</td>
+			<td><input type="radio" value="P" class="present" name="{{ each.1 }}" checked> Present <input type="radio" value="A" class="absent" name="{{ each.1 }}"> Absent </td>
+		</tr>
+		{% endfor %}
+		<tr>
+			<td colspan="4">
+				<input type="hidden" value="{{ index }}" id="index">
+				<input type="button" value="Submit" onclick="saveAttendence()" id="attendence_button">
+			</td>
+			<td>
+				<div id="buttons">
+					<input type="button" value="All Absent" class="allAbsent" id="attendence_button" onclick="Absent()">
+					<input type="button" value="All Present" class="allPresnt" id="attendence_button" onclick="Present()">
+				</div>
+			</td>
+		</tr>
+	</table>
+	
+</form>

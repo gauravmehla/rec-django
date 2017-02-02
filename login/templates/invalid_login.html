@@ -1,0 +1,21 @@
+{% block content %}
+
+	<html>
+
+		<header>
+			<title>:: Oops, Error ::</title>
+			{% load staticfiles %}
+			<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		</header>
+
+		<body>
+			<center>
+				<img src="{% static 'img/sorry.png' %}" alt="">
+				<h2>Your Login Details are Invalid.! </h2>
+				<p>Click <a href="/login/"> here</a> to Login.</p>
+			</center>
+		</body>
+		
+	</html>
+
+{% endblock %}
